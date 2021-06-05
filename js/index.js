@@ -1,11 +1,7 @@
-let db
-let request = indexedDB.open("diagnoapp-db", 1)
+let db = new Dexie("diagnoapp-db")
 
-request.onerror = function(event) {
-  alert("Database error: " + event.target.errorCode)
-}
+db.version(2).stores(
+  { usuarios: '++id,nome,&email,ativo' }
+)
 
-request.onsuccess = function() {
-  db = request.result
-  alert("Banco de dados conectado com sucesso!")
-}
+// db.usuarios.put({nome: "José da Silva", email: "jose.silva@hightechcursos.com.br", ativo: true})
