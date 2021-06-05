@@ -1,6 +1,5 @@
 # DIAGNOAPPP
 
-sdfsdfsd
 
 ## Referências
 
