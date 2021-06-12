@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    --preto: rgb(14, 14, 14);
+    --verde: rgb(40, 216, 161);
+    --verde-50: rgba(40, 216, 161, 0.5);
+    --branco-10: rgba(255,255,255,0.1)
+}
+
+body {
+    background-color: var(--preto);  
+}
+a {
+    color: var(--verde);
+    text-decoration: none;
+}
+main {
+    position: relative;
+    z-index: 5;
+}
+
+.titulo {
+    font-weight: bold;
+    color: white;
+    margin-top: 150px;
+    margin-bottom: 80px;
+    font-size: 40px;
+}
+
+.texto-verde {
+    color: var(--verde);
+}
+.texto-branco {
+    color: white;
+}
+.texto-centro {
+    text-align: center;
+}
+
+.form-input {
+    background-color: var(--branco-10);
+    border: none;
+    border-radius: 3px;
+    padding: 10px 15px;
+}
+.form-input input {
+    background: transparent;
+    border: none;
+    margin-left: 5px;
+    outline: none;
+    color: white;
+    width: 100%;
+}
+
+.w-full {
+    width: 100%;
+}
+.w-70 {
+    width: 70%;
+}
+.w-30 {
+    width: 30%;
+}
+
+.m-auto {
+    margin: auto;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mt-100 {
+    margin-top: 100px;
+}
+
+.d-block {
+    display: block;
+}
+.d-flex {
+    display: flex;
+}
+
+.btn {
+    border: none;
+    border-radius: 3px;
+    padding: 10px 15px;
+    text-transform: uppercase; 
+}
+.btn-primario {
+    background-color: var(--verde);
+    color: white;
+    box-shadow: 0px 3px 15px var(--verde-50);
+}
+
+.bg-elipse1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    z-index: 0;
+}
+.bg-elipse2 {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 50%;
+    z-index: 0;
+}
+
+.icon {
+    width: 20px;
+}
+
+@media screen and (min-width: 840px) {
+    .bg-elipse1, .bg-elipse2 {
+        width: 30%;
+    }
+}

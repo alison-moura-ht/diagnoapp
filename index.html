@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIAGNOAPP</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
+    <main>
+        <h1 class="titulo texto-centro">DIAGNO<span class="texto-verde">APP</span></h1>
+
+        <form>
+            <div class="form-input d-flex w-70 m-auto mb-20">
+                <img class="icon" src="img/email-icon.svg" alt="Ícone de email">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="form-input d-flex w-70 m-auto mb-20">
+                <img class="icon" src="img/lock-icon.svg" alt="Ícone de senha">
+                <input type="password" placeholder="Senha">
+            </div>
+            <button class="btn btn-primario d-block w-70 m-auto">Entrar</button>
+            <p class="texto-branco texto-centro mt-100">Não tem conta? <a href="">Criar conta</a></p>
+        </form>
+    </main>
+
+    <img class="bg-elipse2" src="img/elipse2.svg" alt="Fundo elipse com gradiente radial">
+    <img class="bg-elipse1" src="img/elipse1.svg" alt="Fundo elipse com gradiente radial">
 
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
     <script src="js/index.js"></script>
 </body>
+
 </html>
