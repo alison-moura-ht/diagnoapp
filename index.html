@@ -20,13 +20,13 @@
         <form>
             <div class="form-input d-flex w-70 m-auto mb-20">
                 <img class="icon" src="img/email-icon.svg" alt="Ícone de email">
-                <input type="email" placeholder="Email">
+                <input id="email" type="email" placeholder="Email">
             </div>
             <div class="form-input d-flex w-70 m-auto mb-20">
                 <img class="icon" src="img/lock-icon.svg" alt="Ícone de senha">
-                <input type="password" placeholder="Senha">
+                <input id="senha" type="password" placeholder="Senha">
             </div>
-            <button class="btn btn-primario d-block w-70 m-auto">Entrar</button>
+            <button onclick="login()" class="btn btn-primario d-block w-70 m-auto" type="button">Entrar</button>
             <p class="texto-branco texto-centro mt-100">Não tem conta? <a href="">Criar conta</a></p>
         </form>
     </main>
