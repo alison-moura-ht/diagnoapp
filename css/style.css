@@ -10,6 +10,11 @@
 body {
     background-color: var(--preto);  
 }
+/*Leonildo-Samuel*/
+.body-branco{
+    background-color: var(--branco-10);
+}
+
 a {
     color: var(--verde);
     text-decoration: none;
@@ -26,6 +31,16 @@ main {
     margin-bottom: 80px;
     font-size: 40px;
 }
+/*Leonildo-Samuel*/
+.titulo-novo{
+    margin-top: 60px;
+    padding: 50px;
+}
+/*Leonildo-Samuel*/
+.titulo-usuario{
+    margin-top: -170px;
+    padding: 50px
+}
 
 .texto-verde {
     color: var(--verde);
@@ -33,8 +48,16 @@ main {
 .texto-branco {
     color: white;
 }
+/*Leonildo-Samuel*/
+.texto-preto{
+    color:black;
+}
 .texto-centro {
     text-align: center;
+}
+/*Leonildo-Samuel*/
+.texto-esquerda{
+    text-align: left;
 }
 
 .form-input {
