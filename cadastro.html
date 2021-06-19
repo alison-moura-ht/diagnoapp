@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,13 +17,24 @@
         <form>
             <p class="titulo titulo-pagina texto-preto texto-esquerda">NOVO<br><span class="texto-verde">USUÁRIO</span>
             </p>
-            <input class="campo form-input d-flex w-full mb-20 m-auto" type="text" placeholder="Nome">
-            <input class="campo form-input d-flex w-full mb-20 m-auto" type="email" placeholder="email">
-            <input class="campo form-input d-flex w-full mb-20 m-auto" type="password" placeholder="senha">
+            <input id="nome" class="campo form-input d-flex w-full mb-20 m-auto" type="text" placeholder="Nome">
+            <input id="email" class="campo form-input d-flex w-full mb-20 m-auto" type="email" placeholder="Email">
+            <input id="senha" class="campo form-input d-flex w-full mb-20 m-auto" type="password" placeholder="Senha">
             <button onclick="salvar()" class="btn btn-primario d-block w-full m-auto" type="button">SALVAR</button>
-            <p onclick="voltar()" class="texto-verde texto-centro">Voltar</p>
+            <p class="texto-verde texto-centro"><a href="/index.html">Voltar</a></p>
         </form>
     </main>
+    <div class="alerta">
+        <div class="alerta-corpo">
+            <p class="alerta-mensagem">
+                <strong>Sua conta foi criada com sucesso!</strong>
+            </p>
+            <p>
+                <small>Você será redirecionado em segundos...</small>
+            </p>
+            <div class="alerta-barra-progresso"></div>
+        </div>
+    </div>
     <img class="bg-elipse3" src="img/elipse-solid.svg" alt="Fundo elipse com gradiente radial">
 
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>

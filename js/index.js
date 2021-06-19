@@ -19,4 +19,29 @@ async function login() {
   }
 }
 
-// db.usuarios.put({nome: "Zé da Silva", email: "ze@htcursos.com", ativo: false, senha: "123"})
+async function salvar() {
+
+  let nome = document.getElementById("nome").value
+  let email = document.getElementById("email").value
+  let senha = document.getElementById("senha").value
+
+  //TODO: VALIDAÇÃO
+
+  db.usuarios.put({nome: nome, email: email, ativo: true, senha: senha})
+
+  document.querySelector(".alerta").style.display = "block"
+
+  setTimeout(() => {
+    location.href = "index.html"
+  }, 3000);
+
+  let barraProgresso = document.querySelector(".alerta-barra-progresso")
+  let progresso = 3000
+  
+  setInterval(() => {
+    console.log("Passou um segundo")
+    progresso -= 10
+    barraProgresso.style.width = (progresso*100/3000) + "%"
+  }, 10);
+
+}
