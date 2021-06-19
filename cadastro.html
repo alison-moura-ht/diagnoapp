@@ -1,4 +1,3 @@
-Experimente agoraTente novamente mais tardeNão mostrar novamente
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,20 +12,18 @@ Experimente agoraTente novamente mais tardeNão mostrar novamente
 </head>
 
 <body class="body-branco">
-    <main>
+    <main class="w-70 m-auto">
         <form>
-            <p class="titulo texto-preto texto-esquerda titulo-novo">NOVO</p>
-            <p class="titulo texto-verde texto-esquerda titulo-usuario">USUÁRIO</p>
-            <div>
-                <input class="campo form-input d-flex w-70 m-auto mb-20" type="text" placeholder="Nome">
-                <input class="campo form-input d-flex w-70 m-auto mb-20" type="email" placeholder="email">
-                <input class="campo form-input d-flex w-70 m-auto mb-20" type="password" placeholder="senha">
-                <button onclick="salvar()" class="btn btn-primario d-block w-70 m-auto" type="button">SALVAR</button>
-                <p onclick="voltar()" class="texto-verde texto-centro">Voltar</p>
-            </div>
+            <p class="titulo titulo-pagina texto-preto texto-esquerda">NOVO<br><span class="texto-verde">USUÁRIO</span>
+            </p>
+            <input class="campo form-input d-flex w-full mb-20 m-auto" type="text" placeholder="Nome">
+            <input class="campo form-input d-flex w-full mb-20 m-auto" type="email" placeholder="email">
+            <input class="campo form-input d-flex w-full mb-20 m-auto" type="password" placeholder="senha">
+            <button onclick="salvar()" class="btn btn-primario d-block w-full m-auto" type="button">SALVAR</button>
+            <p onclick="voltar()" class="texto-verde texto-centro">Voltar</p>
         </form>
     </main>
-    <img class="bg-elipse1" src="img/elipse1.svg" alt="Fundo elipse com gradiente radial">
+    <img class="bg-elipse3" src="img/elipse-solid.svg" alt="Fundo elipse com gradiente radial">
 
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
     <script src="js/index.js"></script>

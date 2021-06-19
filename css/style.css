@@ -12,9 +12,6 @@ body {
     background-color: var(--preto);
 }
 
-
-/*Leonildo-Samuel*/
-
 .body-branco {
     background-color: var(--branco-10);
 }
@@ -37,20 +34,8 @@ main {
     font-size: 40px;
 }
 
-
-/*Leonildo-Samuel*/
-
-.titulo-novo {
-    margin-top: 60px;
-    padding: 50px;
-}
-
-
-/*Leonildo-Samuel*/
-
-.titulo-usuario {
-    margin-top: -170px;
-    padding: 50px
+.titulo-pagina {
+    margin-top: 100px;
 }
 
 .texto-verde {
@@ -61,9 +46,6 @@ main {
     color: white;
 }
 
-
-/*Leonildo-Samuel*/
-
 .texto-preto {
     color: black;
 }
@@ -71,9 +53,6 @@ main {
 .texto-centro {
     text-align: center;
 }
-
-
-/*Leonildo-Samuel*/
 
 .texto-esquerda {
     text-align: left;
@@ -95,23 +74,14 @@ main {
     width: 100%;
 }
 
-
-/*Leonildo-Samuel*/
-
 .campo {
     border: 2px solid var(--cinza);
 }
-
-
-/*Leonildo-Samuel*/
 
 .campo:focus {
     outline: none;
     border: 2px solid var(--verde);
 }
-
-
-/*Leonildo-Samuel*/
 
 .campo::placeholder {
     color: var(--cinza);
@@ -178,6 +148,14 @@ main {
     z-index: 0;
 }
 
+.bg-elipse3 {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 50%;
+    z-index: 0;
+}
+
 .icon {
     width: 20px;
 }
@@ -186,5 +164,23 @@ main {
     .bg-elipse1,
     .bg-elipse2 {
         width: 30%;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .bg-elipse3 {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    .bg-elipse3 {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .bg-elipse3 {
+        width: 20%;
     }
 }
