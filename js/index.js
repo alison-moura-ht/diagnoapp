@@ -1,4 +1,5 @@
 let db = new Dexie("diagnoapp-db")
+let usuario = {} // Objeto vazio
 
 db.version(2).stores(
   { usuarios: '++id,nome,&email,ativo,senha,[email+senha]' }
@@ -19,15 +20,80 @@ async function login() {
   }
 }
 
+function validarCampo(campo) {
+  let input = document.getElementById(campo)
+  if(!input.value) {
+    input.classList.add("erro")
+    input.classList.add("animate__animated")
+    input.classList.add("animate__shakeX")
+  } else {
+    input.classList.remove("erro")
+  }
+}
+
+function validarEmail() {
+  let inputEmail = document.getElementById("email")
+  if(
+    inputEmail.value && 
+    inputEmail.value.indexOf("@") > -1 && 
+    inputEmail.value.indexOf(".") > -1
+    ) {
+      inputEmail.classList.remove("erro")
+  } else {
+    inputEmail.classList.add("erro")
+    inputEmail.classList.add("animate__animated")
+    inputEmail.classList.add("animate__shakeX")
+  }
+}
+
+function validar() {
+  
+  let inputNome = document.getElementById("nome")
+  let inputEmail = document.getElementById("email")
+  let inputSenha = document.getElementById("senha")
+  let valido = true
+
+  if(!usuario.nome) {
+    inputNome.classList.add("erro")
+    inputNome.classList.add("animate__animated")
+    inputNome.classList.add("animate__shakeX")
+    valido = false
+  } else {
+    inputNome.classList.remove("erro")
+  }
+
+  if(!usuario.email) {
+    inputEmail.classList.add("erro")
+    inputEmail.classList.add("animate__animated")
+    inputEmail.classList.add("animate__shakeX")
+    valido = false
+  } else {
+    inputEmail.classList.remove("erro")
+  }
+  
+  if(!usuario.senha) {
+    inputSenha.classList.add("erro")
+    inputSenha.classList.add("animate__animated")
+    inputSenha.classList.add("animate__shakeX")
+    valido = false
+  } else {
+    inputSenha.classList.remove("erro")
+  }
+
+  return valido
+}
+
 async function salvar() {
 
-  let nome = document.getElementById("nome").value
-  let email = document.getElementById("email").value
-  let senha = document.getElementById("senha").value
+  usuario.nome = document.getElementById("nome").value
+  usuario.email = document.getElementById("email").value
+  usuario.senha = document.getElementById("senha").value
 
-  //TODO: VALIDAÇÃO
+  let valido = validar()
 
-  db.usuarios.put({nome: nome, email: email, ativo: true, senha: senha})
+  if(valido == false) return
+
+  db.usuarios.put({nome: usuario.nome, email: usuario.email, ativo: true, senha: usuario.senha})
 
   document.querySelector(".alerta").style.display = "block"
 

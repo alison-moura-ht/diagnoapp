@@ -78,6 +78,10 @@ main {
     border: 2px solid var(--cinza);
 }
 
+.campo.erro {
+    border-color: rgb(241, 51, 51);
+}
+
 .campo:focus {
     outline: none;
     border: 2px solid var(--verde);
