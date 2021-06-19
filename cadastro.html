@@ -1,0 +1,35 @@
+Experimente agoraTente novamente mais tardeNão mostrar novamente
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body-branco">
+    <main>
+        <form>
+            <p class="titulo texto-preto texto-esquerda titulo-novo">NOVO</p>
+            <p class="titulo texto-verde texto-esquerda titulo-usuario">USUÁRIO</p>
+            <div>
+                <input class="campo form-input d-flex w-70 m-auto mb-20" type="text" placeholder="Nome">
+                <input class="campo form-input d-flex w-70 m-auto mb-20" type="email" placeholder="email">
+                <input class="campo form-input d-flex w-70 m-auto mb-20" type="password" placeholder="senha">
+                <button onclick="salvar()" class="btn btn-primario d-block w-70 m-auto" type="button">SALVAR</button>
+                <p onclick="voltar()" class="texto-verde texto-centro">Voltar</p>
+            </div>
+        </form>
+    </main>
+    <img class="bg-elipse1" src="img/elipse1.svg" alt="Fundo elipse com gradiente radial">
+
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

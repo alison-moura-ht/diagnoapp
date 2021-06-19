@@ -4,14 +4,18 @@
     --preto: rgb(14, 14, 14);
     --verde: rgb(40, 216, 161);
     --verde-50: rgba(40, 216, 161, 0.5);
-    --branco-10: rgba(255,255,255,0.1)
+    --branco-10: rgba(255, 255, 255, 0.1);
+    --cinza: #626262;
 }
 
 body {
-    background-color: var(--preto);  
+    background-color: var(--preto);
 }
+
+
 /*Leonildo-Samuel*/
-.body-branco{
+
+.body-branco {
     background-color: var(--branco-10);
 }
 
@@ -19,6 +23,7 @@ a {
     color: var(--verde);
     text-decoration: none;
 }
+
 main {
     position: relative;
     z-index: 5;
@@ -31,13 +36,19 @@ main {
     margin-bottom: 80px;
     font-size: 40px;
 }
+
+
 /*Leonildo-Samuel*/
-.titulo-novo{
+
+.titulo-novo {
     margin-top: 60px;
     padding: 50px;
 }
+
+
 /*Leonildo-Samuel*/
-.titulo-usuario{
+
+.titulo-usuario {
     margin-top: -170px;
     padding: 50px
 }
@@ -45,18 +56,26 @@ main {
 .texto-verde {
     color: var(--verde);
 }
+
 .texto-branco {
     color: white;
 }
+
+
 /*Leonildo-Samuel*/
-.texto-preto{
-    color:black;
+
+.texto-preto {
+    color: black;
 }
+
 .texto-centro {
     text-align: center;
 }
+
+
 /*Leonildo-Samuel*/
-.texto-esquerda{
+
+.texto-esquerda {
     text-align: left;
 }
 
@@ -66,6 +85,7 @@ main {
     border-radius: 3px;
     padding: 10px 15px;
 }
+
 .form-input input {
     background: transparent;
     border: none;
@@ -75,12 +95,36 @@ main {
     width: 100%;
 }
 
+
+/*Leonildo-Samuel*/
+
+.campo {
+    border: 2px solid var(--cinza);
+}
+
+
+/*Leonildo-Samuel*/
+
+.campo:focus {
+    outline: none;
+    border: 2px solid var(--verde);
+}
+
+
+/*Leonildo-Samuel*/
+
+.campo::placeholder {
+    color: var(--cinza);
+}
+
 .w-full {
     width: 100%;
 }
+
 .w-70 {
     width: 70%;
 }
+
 .w-30 {
     width: 30%;
 }
@@ -88,9 +132,11 @@ main {
 .m-auto {
     margin: auto;
 }
+
 .mb-20 {
     margin-bottom: 20px;
 }
+
 .mt-100 {
     margin-top: 100px;
 }
@@ -98,6 +144,7 @@ main {
 .d-block {
     display: block;
 }
+
 .d-flex {
     display: flex;
 }
@@ -106,8 +153,9 @@ main {
     border: none;
     border-radius: 3px;
     padding: 10px 15px;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
+
 .btn-primario {
     background-color: var(--verde);
     color: white;
@@ -121,6 +169,7 @@ main {
     width: 50%;
     z-index: 0;
 }
+
 .bg-elipse2 {
     position: absolute;
     right: 0px;
@@ -134,7 +183,8 @@ main {
 }
 
 @media screen and (min-width: 840px) {
-    .bg-elipse1, .bg-elipse2 {
+    .bg-elipse1,
+    .bg-elipse2 {
         width: 30%;
     }
 }
