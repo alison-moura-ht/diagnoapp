@@ -1,44 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DIAGNOAPP</title>
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body class="body-branco">
-    <main class="w-70 m-auto">
-      <h1 class="titulo titulo-pagina texto-preto texto-esquerda">
-        LISTA DE<br /><span class="texto-verde">USUÁRIOS</span>
-      </h1>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="lista"></tbody>
-      </table>
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIAGNOAPP</title>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-    <img
-      class="bg-elipse3"
-      src="img/elipse-solid.svg"
-      alt="Fundo elipse com gradiente radial"
-    />
+<body class="body-branco">
+  <main class="w-70 m-auto">
+    <h1 class="titulo titulo-pagina texto-preto texto-esquerda">
+      LISTA DE<br /><span class="texto-verde">USUÁRIOS</span>
+    </h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="lista"></tbody>
+    </table>
+  </main>
 
-    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-    <script src="js/index.js"></script>
-  </body>
+  <div class="alerta">
+    <div class="alerta-corpo">
+      <p class="alerta-mensagem">
+        <strong>Edição de usuário!</strong>
+      </p>
+      <form>
+        <input onblur="validarCampo('nome')" id="nome" class="campo form-input d-flex w-full mb-20 m-auto" type="text"
+          placeholder="Nome">
+        <input onblur="validarEmail()" id="email" class="campo form-input d-flex w-full mb-20 m-auto" type="email"
+          placeholder="Email">
+        <input onblur="validarCampo('senha')" id="senha" class="campo form-input d-flex w-full mb-20 m-auto"
+          type="password" placeholder="Senha">
+        <button onclick="salvar()" class="btn btn-primario d-block w-full m-auto" type="button">SALVAR</button>
+        <p class="texto-verde texto-centro"><a href="/index.html">Voltar</a></p>
+      </form>
+    </div>
+  </div>
+
+  <img class="bg-elipse3" src="img/elipse-solid.svg" alt="Fundo elipse com gradiente radial" />
+
+  <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
 </html>

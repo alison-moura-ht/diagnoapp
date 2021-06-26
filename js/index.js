@@ -116,19 +116,31 @@ window.onload = listarUsuarios()
 async function listarUsuarios() { 
 
   let resposta = await db.usuarios.toArray()
-  
   let tableBody = document.getElementById("lista")  
 
   for(let cont = 0; cont < resposta.length; cont++) {
-
     tableBody.innerHTML += `
     <tr>
       <td>${resposta[cont].id}</td>
       <td>${resposta[cont].nome}</td>
       <td>${resposta[cont].email}</td>
       <td>${resposta[cont].ativo ? "Ativo" : "Inativo"}</td>
+      <td>
+        <button onclick="editar(${resposta[cont].id})">Editar</button>
+        <button onclick="remover(${resposta[cont].id})">Remover</button>
+      </td>
     </tr>
     `
   }
-  
+}
+
+function editar(id) {
+  document.querySelector(".alerta").style.display = "block"
+  // Busca no banco de dados o usuário pelo id
+  // Preenche o form com os dados do usuário retornado
+}
+
+function remover(id) {
+  console.log("chamou o remover " + id)
+  // Remove o usuário pelo id
 }
