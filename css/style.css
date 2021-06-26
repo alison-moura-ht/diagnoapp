@@ -1,236 +1,240 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    --preto: rgb(14, 14, 14);
-    --verde: rgb(40, 216, 161);
-    --verde-50: rgba(40, 216, 161, 0.5);
-    --branco-10: rgba(255, 255, 255, 0.1);
-    --cinza: #626262;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  --preto: rgb(14, 14, 14);
+  --verde: rgb(40, 216, 161);
+  --verde-50: rgba(40, 216, 161, 0.5);
+  --branco-10: rgba(255, 255, 255, 0.1);
+  --cinza: #626262;
 }
 
 body {
-    background-color: var(--preto);
+  background-color: var(--preto);
 }
 
 .body-branco {
-    background-color: var(--branco-10);
+  background-color: var(--branco-10);
 }
 
 a {
-    color: var(--verde);
-    text-decoration: none;
+  color: var(--verde);
+  text-decoration: none;
 }
 
 main {
-    position: relative;
-    z-index: 5;
+  position: relative;
+  z-index: 5;
 }
 
 .titulo {
-    font-weight: bold;
-    color: white;
-    margin-top: 150px;
-    margin-bottom: 80px;
-    font-size: 40px;
+  font-weight: bold;
+  color: white;
+  margin-top: 150px;
+  margin-bottom: 80px;
+  font-size: 40px;
 }
 
 .titulo-pagina {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .texto-verde {
-    color: var(--verde);
+  color: var(--verde);
 }
 
 .texto-branco {
-    color: white;
+  color: white;
 }
 
 .texto-preto {
-    color: black;
+  color: black;
 }
 
 .texto-centro {
-    text-align: center;
+  text-align: center;
 }
 
 .texto-esquerda {
-    text-align: left;
+  text-align: left;
 }
 
 .form-input {
-    background-color: var(--branco-10);
-    border: none;
-    border-radius: 3px;
-    padding: 10px 15px;
+  background-color: var(--branco-10);
+  border: none;
+  border-radius: 3px;
+  padding: 10px 15px;
 }
 
 .form-input input {
-    background: transparent;
-    border: none;
-    margin-left: 5px;
-    outline: none;
-    color: white;
-    width: 100%;
+  background: transparent;
+  border: none;
+  margin-left: 5px;
+  outline: none;
+  color: white;
+  width: 100%;
 }
 
 .campo {
-    border: 2px solid var(--cinza);
+  border: 2px solid var(--cinza);
 }
 
 .campo.erro {
-    border-color: rgb(241, 51, 51);
+  border-color: rgb(241, 51, 51);
 }
 
 .campo:focus {
-    outline: none;
-    border: 2px solid var(--verde);
+  outline: none;
+  border: 2px solid var(--verde);
 }
 
 .campo::placeholder {
-    color: var(--cinza);
+  color: var(--cinza);
 }
 
 .alerta {
-    display: none;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0, .4);
-    color: white;
-    border-radius: 3px;
-    padding: 20px;
-    position: absolute;
-    top: 0px;
-    margin: auto;
-    z-index: 10;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 3px;
+  padding: 20px;
+  position: absolute;
+  top: 0px;
+  margin: auto;
+  z-index: 10;
 }
 
-
 .alerta-corpo {
-    background-color: var(--verde);
-    padding: 30px;
-    border-radius: 3px;
-    width: 80%;
-    margin: auto;
-    margin-top: 250px;
-    animation: animacao-alerta 0.5s ease 0s;
+  background-color: var(--verde);
+  padding: 30px;
+  border-radius: 3px;
+  width: 80%;
+  margin: auto;
+  margin-top: 250px;
+  animation: animacao-alerta 0.5s ease 0s;
 }
 
 .alerta-barra-progresso {
-    background-color: white;
-    width: 100%;
-    height: 2px;
-    border-radius: 2px;
+  background-color: white;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
 }
 
 @keyframes animacao-alerta {
-    0% {
-        margin-top: -200px;
-        opacity: 0;
-    }
-    75% {
-        margin-top: 270px;
-    }
-    100% {
-        margin-top: 250px;
-        opacity: 1;
-    }
+  0% {
+    margin-top: -200px;
+    opacity: 0;
+  }
+  75% {
+    margin-top: 270px;
+  }
+  100% {
+    margin-top: 250px;
+    opacity: 1;
+  }
 }
 
 .w-full {
-    width: 100%;
+  width: 100%;
 }
 
 .w-70 {
-    width: 70%;
+  width: 70%;
 }
 
 .w-30 {
-    width: 30%;
+  width: 30%;
 }
 
 .m-auto {
-    margin: auto;
+  margin: auto;
 }
 
 .mb-20 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .mt-100 {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .d-block {
-    display: block;
+  display: block;
 }
 
 .d-flex {
-    display: flex;
+  display: flex;
 }
 
 .btn {
-    border: none;
-    border-radius: 3px;
-    padding: 10px 15px;
-    text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 15px;
+  text-transform: uppercase;
 }
 
 .btn-primario {
-    background-color: var(--verde);
-    color: white;
-    box-shadow: 0px 3px 15px var(--verde-50);
+  background-color: var(--verde);
+  color: white;
+  box-shadow: 0px 3px 15px var(--verde-50);
 }
 
 .bg-elipse1 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 50%;
-    z-index: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  z-index: 0;
 }
 
 .bg-elipse2 {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    width: 50%;
-    z-index: 0;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 50%;
+  z-index: 0;
 }
 
 .bg-elipse3 {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    width: 50%;
-    z-index: 0;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 50%;
+  z-index: 0;
 }
 
 .icon {
-    width: 20px;
+  width: 20px;
 }
 
 @media screen and (min-width: 840px) {
-    .bg-elipse1,
-    .bg-elipse2 {
-        width: 30%;
-    }
+  .bg-elipse1,
+  .bg-elipse2 {
+    width: 30%;
+  }
 }
 
 @media screen and (min-width: 640px) {
-    .bg-elipse3 {
-        width: 40%;
-    }
+  .bg-elipse3 {
+    width: 40%;
+  }
 }
 
 @media screen and (min-width: 840px) {
-    .bg-elipse3 {
-        width: 30%;
-    }
+  .bg-elipse3 {
+    width: 30%;
+  }
 }
 
 @media screen and (min-width: 1250px) {
-    .bg-elipse3 {
-        width: 20%;
-    }
+  .bg-elipse3 {
+    width: 20%;
+  }
+}
+td {
+  padding: 15px 25px;
+  background-color: var(--verde);
+  border-radius: 3px;
 }
