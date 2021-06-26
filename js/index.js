@@ -121,31 +121,14 @@ async function listarUsuarios() {
 
   for(let cont = 0; cont < resposta.length; cont++) {
 
-    let tr = document.createElement("tr")
-
-    let tdId = document.createElement("td")
-    tdId.innerText = resposta[cont].id
-
-    let tdNome = document.createElement("td")
-    tdNome.innerText = resposta[cont].nome
-
-    let tdEmail = document.createElement("td")
-    tdEmail.innerText = resposta[cont].email
-
-    let tdAtivo = document.createElement("td")
-    if(resposta[cont].ativo){
-      
-      tdAtivo.innerText = "Ativo"
-    }
-    else{
-      tdAtivo.innerText = "Inativo"
-    }
-
-    tr.appendChild(tdId)
-    tr.appendChild(tdNome)
-    tr.appendChild(tdEmail)
-    tr.appendChild(tdAtivo)
-    tableBody.appendChild(tr)
+    tableBody.innerHTML += `
+    <tr>
+      <td>${resposta[cont].id}</td>
+      <td>${resposta[cont].nome}</td>
+      <td>${resposta[cont].email}</td>
+      <td>${resposta[cont].ativo ? "Ativo" : "Inativo"}</td>
+    </tr>
+    `
   }
   
 }

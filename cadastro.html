@@ -14,12 +14,15 @@
 
 <body class="body-branco">
     <main class="w-70 m-auto">
+        <h1 class="titulo titulo-pagina texto-preto texto-esquerda">NOVO<br><span class="texto-verde">USUÁRIO</span>
+        </h1>
         <form>
-            <p class="titulo titulo-pagina texto-preto texto-esquerda">NOVO<br><span class="texto-verde">USUÁRIO</span>
-            </p>
-            <input onblur="validarCampo('nome')" id="nome" class="campo form-input d-flex w-full mb-20 m-auto" type="text" placeholder="Nome">
-            <input onblur="validarEmail()" id="email" class="campo form-input d-flex w-full mb-20 m-auto" type="email" placeholder="Email">
-            <input onblur="validarCampo('senha')" id="senha" class="campo form-input d-flex w-full mb-20 m-auto" type="password" placeholder="Senha">
+            <input onblur="validarCampo('nome')" id="nome" class="campo form-input d-flex w-full mb-20 m-auto"
+                type="text" placeholder="Nome">
+            <input onblur="validarEmail()" id="email" class="campo form-input d-flex w-full mb-20 m-auto" type="email"
+                placeholder="Email">
+            <input onblur="validarCampo('senha')" id="senha" class="campo form-input d-flex w-full mb-20 m-auto"
+                type="password" placeholder="Senha">
             <button onclick="salvar()" class="btn btn-primario d-block w-full m-auto" type="button">SALVAR</button>
             <p class="texto-verde texto-centro"><a href="/index.html">Voltar</a></p>
         </form>
