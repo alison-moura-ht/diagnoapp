@@ -73,18 +73,32 @@ function salvar() {
   let valido = validar()
 
   if (!valido) {
-    alert("Formulário inválido")
+    document.querySelector(".alerta-titulo").innerHTML = "Formulário com erro!"
+    document.querySelector(".alerta-detalhe").innerHTML = "Verifique as informações do formulário"
+    document.querySelector(".alerta").style.display = "block"
+
+    setTimeout(() => {
+      document.querySelector(".alerta").style.display = "none"
+    }, 3000);
+    
+    timeoutProgresso()
     return
   }
 
   db.usuarios.put({ nome: usuario.nome, email: usuario.email, ativo: true, senha: usuario.senha })
 
+  document.querySelector(".alerta-titulo").innerHTML = "Sua conta foi criada com sucesso!"
+  document.querySelector(".alerta-detalhe").innerHTML = "Você será redirecionado em segundos..."
   document.querySelector(".alerta").style.display = "block"
 
   setTimeout(() => {
     location.href = "index.html"
   }, 3000);
 
+  timeoutProgresso()
+}
+
+function timeoutProgresso() {
   let barraProgresso = document.querySelector(".alerta-barra-progresso")
   let progresso = 3000
 
@@ -93,8 +107,8 @@ function salvar() {
     progresso -= 10
     barraProgresso.style.width = (progresso * 100 / 3000) + "%"
   }, 10);
-
 }
+
 window.onload = listarUsuarios()
 
 async function listarUsuarios() {
