@@ -1,8 +1,11 @@
 let db = new Dexie("diagnoapp-db")
 let usuario = {} // Objeto vazio
 
-db.version(2).stores(
-  { usuarios: '++id,nome,&email,ativo,senha,[email+senha]' }
+db.version(3).stores(
+  { usuarios: '++id,nome,&email,ativo,senha,[email+senha]' },
+  { resultados: '++id,data,usuario' },
+  { perguntas: '++id,descricao,resultado' },
+  { respostas: '++id,descricao,diagnostico,pergunta' }
 )
 
 async function login() {
@@ -20,14 +23,16 @@ async function login() {
   }
 }
 
-function validarCampo(campo) {
-  let input = document.getElementById(campo)
+function validarCampo(id) {
+  let input = document.getElementById(id)
   if (!input.value) {
     input.classList.add("erro")
     input.classList.add("animate__animated")
     input.classList.add("animate__shakeX")
+    return false
   } else {
     input.classList.remove("erro")
+    return true
   }
 }
 
@@ -39,46 +44,22 @@ function validarEmail() {
     inputEmail.value.indexOf(".") > -1
   ) {
     inputEmail.classList.remove("erro")
+    return true
   } else {
     inputEmail.classList.add("erro")
     inputEmail.classList.add("animate__animated")
     inputEmail.classList.add("animate__shakeX")
+    return false
   }
 }
 
 function validar() {
 
-  let inputNome = document.getElementById("nome")
-  let inputEmail = document.getElementById("email")
-  let inputSenha = document.getElementById("senha")
   let valido = true
 
-  if (!usuario.nome) {
-    inputNome.classList.add("erro")
-    inputNome.classList.add("animate__animated")
-    inputNome.classList.add("animate__shakeX")
-    valido = false
-  } else {
-    inputNome.classList.remove("erro")
-  }
-
-  if (!usuario.email) {
-    inputEmail.classList.add("erro")
-    inputEmail.classList.add("animate__animated")
-    inputEmail.classList.add("animate__shakeX")
-    valido = false
-  } else {
-    inputEmail.classList.remove("erro")
-  }
-
-  if (!usuario.senha) {
-    inputSenha.classList.add("erro")
-    inputSenha.classList.add("animate__animated")
-    inputSenha.classList.add("animate__shakeX")
-    valido = false
-  } else {
-    inputSenha.classList.remove("erro")
-  }
+  if (!validarCampo("nome")) valido = false
+  if (!validarCampo("senha")) valido = false
+  if (!validarEmail()) valido = false
 
   return valido
 }
@@ -91,7 +72,10 @@ function salvar() {
 
   let valido = validar()
 
-  if (valido == false) return
+  if (!valido) {
+    alert("Formulário inválido")
+    return
+  }
 
   db.usuarios.put({ nome: usuario.nome, email: usuario.email, ativo: true, senha: usuario.senha })
 
@@ -113,12 +97,12 @@ function salvar() {
 }
 window.onload = listarUsuarios()
 
-async function listarUsuarios() { 
+async function listarUsuarios() {
 
   let resposta = await db.usuarios.toArray()
-  let tableBody = document.getElementById("lista")  
+  let tableBody = document.getElementById("lista")
 
-  for(let cont = 0; cont < resposta.length; cont++) {
+  for (let cont = 0; cont < resposta.length; cont++) {
     tableBody.innerHTML += `
     <tr>
       <td>${resposta[cont].id}</td>
