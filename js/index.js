@@ -134,7 +134,9 @@ function editar(id) {
 }
 
 function remover(id) {
-    console.log("chamou o remover " + id)
-    db.usuarios.delete(id)
-    window.location.reload()
+    if(confirm("Você tem certeza?")) {
+      console.log("chamou o remover " + id)
+      db.usuarios.delete(id)
+      window.location.reload()
+    }
 }
