@@ -6,14 +6,22 @@
   --verde-50: rgba(40, 216, 161, 0.5);
   --branco-10: rgba(255, 255, 255, 0.1);
   --cinza: #626262;
+  --erro: rgb(241, 51, 51);
 }
 
 body {
   background-color: var(--preto);
+  overflow-x: hidden;
 }
 
-.body-branco {
-  background-color: var(--branco-10);
+.bg-branco {
+  background-color: white;
+}
+.bg-verde {
+  background-color: var(--verde);
+}
+.bg-transparent {
+  background-color: var(--verde);
 }
 
 a {
@@ -24,6 +32,15 @@ a {
 main {
   position: relative;
   z-index: 5;
+  overflow-x: hidden;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .titulo {
@@ -79,7 +96,7 @@ main {
 }
 
 .campo.erro {
-  border-color: rgb(241, 51, 51);
+  border-color: var(--erro);
 }
 
 .campo:focus {
@@ -136,6 +153,10 @@ main {
   }
 }
 
+.h-full {
+  height: 100%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -156,8 +177,56 @@ main {
   margin-bottom: 20px;
 }
 
+.mt-20 {
+  margin-top: 20px;
+}
+.mt-50 {
+  margin-top: 50px;
+}
 .mt-100 {
   margin-top: 100px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+.p-30 {
+  padding: 30px;
+}
+
+.py-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.px-10 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.pr-10 {
+  padding-right: 10px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.border-none {
+  border: none;
+}
+.border-2 {
+  border-width: 2;
+}
+.border-white {
+  border-color: white;
+}
+.border-solid {
+  border-style: solid;
+}
+
+.rounded {
+  border-radius: 20px;
 }
 
 .d-block {
@@ -166,6 +235,10 @@ main {
 
 .d-flex {
   display: flex;
+}
+
+.align-itens-center {
+  align-items: center;
 }
 
 .btn {
@@ -207,6 +280,10 @@ main {
 
 .icon {
   width: 20px;
+}
+
+.page-number {
+  width: calc(100% - 60px);
 }
 
 @media screen and (min-width: 840px) {

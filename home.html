@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-branco">
+    <main class="w-70 m-auto">
+        <h1 class="titulo titulo-pagina texto-preto texto-esquerda">OLÁ<br><span class="texto-verde">FULANO</span>
+        </h1>
+        <form>
+            <button onclick="irParaQuestionario()" class="btn btn-primario d-block w-full m-auto" type="button">INICIAR NOVO DIAGNÓSTICO</button>
+            <button onclick="irParaListaDeUsuarios()" class="btn btn-primario d-block w-full m-auto mt-20" type="button">LISTA DE USUÁRIOS</button>
+            <p class="texto-verde texto-centro mt-20"><a href="/index.html">SAIR</a></p>
+        </form>
+    </main>
+    <img class="bg-elipse3" src="img/elipse-solid.svg" alt="Fundo elipse com gradiente radial">
+
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

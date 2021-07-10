@@ -1,6 +1,48 @@
 let db = new Dexie("diagnoapp-db")
 let usuario = {} // Objeto vazio
 
+let questionario = [
+    {
+        descricao: "VOCÊ SEPARA A SUA CONTA PF DA SUA CONTA PJ?",
+        opcoes: [
+            {
+                descricao: "Sim",
+                diagnostico: "Ótimo, esse é o caminho"
+            },
+            {
+                descricao: "Não",
+                diagnostico: "Que pena, você precisa melhorar"
+            }
+        ]
+    },
+    {
+        descricao: "VOCÊ REALIZA CONTROLE DE FLUXO DE CAIXA?",
+        opcoes: [
+            {
+                descricao: "Sim",
+                diagnostico: "Ótimo, esse é o caminho"
+            },
+            {
+                descricao: "Não",
+                diagnostico: "Que pena, você precisa melhorar"
+            }
+        ]
+    },
+    {
+        descricao: "VOCÊ POUPA O DINHEIRO DE ALGUMA FORMA?",
+        opcoes: [
+            {
+                descricao: "Sim",
+                diagnostico: "Ótimo, esse é o caminho"
+            },
+            {
+                descricao: "Não",
+                diagnostico: "Que pena, você precisa melhorar"
+            }
+        ]
+    }
+]
+
 db.version(3).stores({ usuarios: '++id,nome,&email,ativo,senha,[email+senha]' }, { resultados: '++id,data,usuario' }, { perguntas: '++id,descricao,resultado' }, { respostas: '++id,descricao,diagnostico,pergunta' })
 
 async function login() {
@@ -139,4 +181,12 @@ function remover(id) {
       db.usuarios.delete(id)
       window.location.reload()
     }
+}
+
+function irParaListaDeUsuarios() {
+    location.assign("/lista-cadastrados.html")
+}
+
+function irParaQuestionario() {
+    location.assign("/questionario.html")
 }
