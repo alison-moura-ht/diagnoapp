@@ -37,13 +37,13 @@
         <strong>Edição de usuário!</strong>
       </p>
       <form>
-        <input onblur="validarCampo('nome')" id="nome" class="campo form-input d-flex w-full mb-20 m-auto" type="text"
+        <input id="nome" class="campo form-input d-flex w-full mb-20 m-auto" type="text"
           placeholder="Nome">
-        <input onblur="validarEmail()" id="email" class="campo form-input d-flex w-full mb-20 m-auto" type="email"
+        <input id="email" class="campo form-input d-flex w-full mb-20 m-auto" type="email"
           placeholder="Email">
-        <input onblur="validarCampo('senha')" id="senha" class="campo form-input d-flex w-full mb-20 m-auto"
+        <input id="senha" class="campo form-input d-flex w-full mb-20 m-auto"
           type="password" placeholder="Senha">
-        <button onclick="salvar()" class="btn btn-primario d-block w-full m-auto" type="button">SALVAR</button>
+        <button id="btnSalvar" class="btn btn-primario d-block w-full m-auto" type="button">SALVAR</button>
         <p class="texto-verde texto-centro"><a href="/index.html">Voltar</a></p>
       </form>
     </div>
@@ -52,7 +52,7 @@
   <img class="bg-elipse3" src="img/elipse-solid.svg" alt="Fundo elipse com gradiente radial" />
 
   <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-  <script src="js/index.js"></script>
+  <script src="controllers/lista-usuarios-controller.js" type="module"></script>
 </body>
 
 </html>

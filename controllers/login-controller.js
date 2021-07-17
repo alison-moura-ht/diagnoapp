@@ -7,7 +7,7 @@ async function login() {
     let usuarioEncontrado = await usuario.buscarPorEmailESenha(email, senha)
     if (usuarioEncontrado) {
         if (usuarioEncontrado.ativo) {
-            alert("Usuário encontrado")
+            location.assign("home.html")
         } else {
             alert("Usuário está inativo")
         }

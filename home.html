@@ -16,14 +16,14 @@
         <h1 class="titulo titulo-pagina texto-preto texto-esquerda">OLÁ<br><span class="texto-verde">FULANO</span>
         </h1>
         <form>
-            <button onclick="irParaQuestionario()" class="btn btn-primario d-block w-full m-auto" type="button">INICIAR NOVO DIAGNÓSTICO</button>
-            <button onclick="irParaListaDeUsuarios()" class="btn btn-primario d-block w-full m-auto mt-20" type="button">LISTA DE USUÁRIOS</button>
+            <button id="btnIniciar" class="btn btn-primario d-block w-full m-auto" type="button">INICIAR NOVO DIAGNÓSTICO</button>
+            <button id="btnUsuarios" class="btn btn-primario d-block w-full m-auto mt-20" type="button">LISTA DE USUÁRIOS</button>
             <p class="texto-verde texto-centro mt-20"><a href="/index.html">SAIR</a></p>
         </form>
     </main>
     <img class="bg-elipse3" src="img/elipse-solid.svg" alt="Fundo elipse com gradiente radial">
 
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-    <script src="js/index.js"></script>
+    <script src="controllers/home-controller.js" type="module"></script>
 </body>
 </html>
