@@ -1,4 +1,6 @@
-let db = new Dexie("diagnoapp-db")
+import db from './../db/index.js'
+import './../models/usuario.js'
+
 let usuario = {} // Objeto vazio
 
 let questionario = [
@@ -42,8 +44,6 @@ let questionario = [
         ]
     }
 ]
-
-db.version(3).stores({ usuarios: '++id,nome,&email,ativo,senha,[email+senha]' }, { resultados: '++id,data,usuario' }, { perguntas: '++id,descricao,resultado' }, { respostas: '++id,descricao,diagnostico,pergunta' })
 
 async function login() {
     let email = document.getElementById("email").value
