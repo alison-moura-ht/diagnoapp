@@ -41,12 +41,29 @@ let questionario = [
                 diagnostico: "Que pena, você precisa melhorar"
             }
         ]
+    },
+    {
+        descricao: "VOCÊ DORME?",
+        opcoes: [
+            {
+                descricao: "Sim",
+                diagnostico: "Que pena, você precisa melhorar"
+            },
+            {
+                descricao: "Não",
+                diagnostico: "Ótimo, esse é o caminho"
+            }
+        ]
     }
 ]
 let posicaoQuestaoAtual = 0
 
 function cancelarQuestionario() {
     history.go(-1)
+}
+
+function fecharQuestionario() {
+    location.assign('home.html')
 }
 
 function carregarQuestao() {
@@ -106,6 +123,25 @@ function limparSelecao() {
     }
 }
 
+function finalizarQuestionario() {
+    document.querySelector(".questionario-resultado").classList.remove("d-none")
+    let divDiagnosticos = document.getElementById("diagnosticos")
+
+    for(let cont = 0; cont < questionario.length; cont++) {
+        let questao = questionario[cont]
+        let opcaoSelecionada = questao.opcoes.find((opcao) => {
+            return opcao.selecionado == true
+        })
+        
+        divDiagnosticos.innerHTML += `
+        <div>
+            <p class="font-2 bold texto-cinza">${questao.descricao}</p>
+            <p class="font-1 texto-cinza">SUA RESPOSTA: <strong>${opcaoSelecionada.descricao}</strong></p>
+            <p class="texto-verde bold line-2 font-3">${opcaoSelecionada.diagnostico}</p>
+        </div>
+        `
+    }
+}
 
 function proximo() {
     posicaoQuestaoAtual++
@@ -120,4 +156,6 @@ function voltar() {
 document.getElementById("btnCancelar").onclick = cancelarQuestionario
 document.getElementById("btnProximo").onclick = proximo
 document.getElementById("btnVoltar").onclick = voltar
+document.getElementById("btnFinalizar").onclick = finalizarQuestionario
+document.getElementById("btnFechar").onclick = fecharQuestionario
 window.onload = carregarQuestao

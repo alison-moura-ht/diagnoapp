@@ -21,7 +21,7 @@ body {
   background-color: var(--verde);
 }
 .bg-transparent {
-  background-color: var(--verde);
+  background-color: transparent;
 }
 
 a {
@@ -67,12 +67,36 @@ main {
   color: black;
 }
 
+.texto-cinza {
+  color: var(--cinza);
+}
+
 .texto-centro {
   text-align: center;
 }
 
 .texto-esquerda {
   text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.line-2 {
+  line-height: 2;
+}
+
+.font-1 {
+  font-size: 10px;
+}
+
+.font-2 {
+  font-size: 12px;
+}
+
+.font-3 {
+  font-size: 21px;
 }
 
 .form-input {
@@ -288,6 +312,14 @@ main {
 
 .page-number {
   width: calc(100% - 60px);
+}
+
+.questionario-resultado {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 10;
 }
 
 @media screen and (min-width: 840px) {
