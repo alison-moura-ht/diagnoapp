@@ -17,17 +17,19 @@
 
     <main class="p-30 d-flex absolute h-full align-itens-center">
         <div>
-            <h1 class="texto-branco texto-centro">VOCÊ REALIZA CONTROLE DE FLUXO DE CAIXA?</h1>
+            <h1 id="pergunta" class="texto-branco texto-centro"></h1>
             <div id="opcoes">
                 <button
                     class="texto-branco w-full mt-20 border-none border-2 border-white border-solid py-10 bg-transparent">Sim</button>
                 <button
                     class="texto-branco w-full mt-20 border-none border-2 border-white border-solid py-10 bg-transparent">Não</button>
             </div>
-            <button class="mt-50 w-full border-none py-10 bg-branco texto-verde rounded">PRÓXIMO</button>
+            <button id="btnProximo" class="mt-50 w-full border-none py-10 bg-branco texto-verde rounded">PRÓXIMO</button>
+            <button id="btnFinalizar" class="mt-50 w-full border-none py-10 bg-branco texto-verde rounded d-none">FINALIZAR</button>
+            <button id="btnVoltar" class="mt-20 w-full border-none py-10 bg-transparent texto-branco rounded d-none">VOLTAR</button>
             <button id="btnCancelar" class="mt-20 w-full border-none py-10 bg-transparent texto-branco rounded">CANCELAR</button>
         </div>
-        <p class="page-number texto-branco texto-centro absolute bottom-0">1/3</p>
+        <p class="page-number texto-branco texto-centro absolute bottom-0"></p>
     </main>
 
     <script type="module" src="controllers/questionario-controller.js"></script>

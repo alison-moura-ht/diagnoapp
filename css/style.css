@@ -237,6 +237,10 @@ main {
   display: flex;
 }
 
+.d-none {
+  display: none;
+}
+
 .align-itens-center {
   align-items: center;
 }
